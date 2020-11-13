@@ -4,7 +4,7 @@
 #include <stdlib.h> //per rand e srand
 
 char plain[128], chiave[128], out[128];
-time_t t; //inizializzo seme con tempo attuale
+time_t t; //inizializzo seed con tempo attuale
 char scelta;
 int caso1();
 int caso2();
@@ -64,7 +64,7 @@ printf("\n");
 }
 
 int caso1(){
-  //printf("\n Sono int int caso1()\n");
+  //printf("\n DEBUG sono in int caso1()\n");
   char reverse[128];
 
   printf("\nInserire manualmente chiave di cifratura di lunghezza minima %d e massima 128\n", a);
@@ -127,7 +127,7 @@ int caso2() {
     out[i] = plain[i] ^ chiave [i];
 
   }
-  //stampo chiave di sicurezza
+  //stampo chiave di sicurezza (singoli caratteri)
   for(int i = 0; i < a; i++){
     printf("Carattere %d chiave di sicurezza: %c\n", i + 1, chiave[i]);
   }
